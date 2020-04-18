@@ -1,0 +1,30 @@
+{
+  "name": "covid-19-nlu-data",
+  "version": "0.1.0",
+  "description": "Converted JSON training data to Markdown and changed to use new Rasa experimental Retrieval Actions",
+  "main": "convert.js",
+  "scripts": {
+    "start": "npm run convert-to-retrievals && npm run convert-to-md",
+    "convert-to-retrievals": "node convert.js",
+    "convert-to-md": "rasa data convert nlu -f md --data ./temp/converted_data.json --out ./temp/covid19_data.md"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ortsaCniveK/covid-19-nlu-data.git"
+  },
+  "keywords": [
+    "Rasa",
+    "NLU",
+    "Training",
+    "Data"
+  ],
+  "author": "Kevin Castro",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/ortsaCniveK/covid-19-nlu-data/issues"
+  },
+  "homepage": "https://github.com/ortsaCniveK/covid-19-nlu-data#readme",
+  "dependencies": {
+    "needle": "^2.4.1"
+  }
+}
